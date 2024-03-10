@@ -16,7 +16,8 @@ export async function httpTrigger2(
   );
 
   const events = await client.streamChatCompletions(
-    'gpt-4',
+    'gpt-3.5-turbo',
+    // 'gpt-4',
     [
       { role: 'system', content: 'You are an AI assistant that helps people find information.' },
       { role: 'user', content: 'Azure Functions について分かりやすく説明してください' },
