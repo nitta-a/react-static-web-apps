@@ -20,6 +20,6 @@
   },
   "main": "dist/src/functions/*.js",
   "engines": {
-    "node": "18.x"
+    "node": "16.x"
   }
 }
