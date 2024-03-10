@@ -11,8 +11,8 @@ export async function httpTrigger2(
   context.log(`Http function processed request for url "${request.url}"`);
 
   const client = new OpenAIClient(
-    process.env.AZURE_OPENAI_ENDPOINT,
-    new AzureKeyCredential(process.env.AZURE_OPENAI_KEY)
+    process.env.AZURE_OPENAI_ENDPOINT || "",
+    new AzureKeyCredential(process.env.AZURE_OPENAI_KEY || "")
   );
 
   const events = await client.streamChatCompletions(
