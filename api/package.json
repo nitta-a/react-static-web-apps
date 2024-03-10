@@ -19,7 +19,7 @@
     "rimraf": "^5.0.5"
   },
   "main": "dist/src/functions/*.js",
-  "platform": {
-    "apiRuntime": "node:18"
+  "engines": {
+    "node": "18.x"
   }
 }
