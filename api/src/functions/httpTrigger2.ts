@@ -16,7 +16,7 @@ export async function httpTrigger2(
   );
 
   const events = await client.streamChatCompletions(
-    'gpt-3.5-turbo',
+    'gpt-35-turbo-0613',
     // 'gpt-4',
     [
       { role: 'system', content: 'You are an AI assistant that helps people find information.' },
