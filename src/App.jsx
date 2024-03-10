@@ -13,6 +13,16 @@ function App() {
     })();
   }, []);
 
+  useEffect(() => {
+    fetch('/api/httpTrigger2')
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((e) => {
+        console.error(e);
+      });
+  }, []);
+
   return <div>Hello {value} {data}</div>;
 }
 
