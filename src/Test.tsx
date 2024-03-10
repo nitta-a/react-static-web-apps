@@ -5,10 +5,10 @@ export const Test: React.FC = () => {
 
   useEffect(() => {
     (async () => {
-      const { text } = await (await fetch('/api/message')).json();
-      setData(text);
+      const res = await (await fetch('/api/message')).json();
+      setData(res);
     })();
   });
 
-  return <div>{data}</div>;
+  return <div>Test component {data}</div>;
 };
