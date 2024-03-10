@@ -1,4 +1,3 @@
-import React from 'react';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
       .then((res) => {
         console.log(res);
       })
-      .catch((e) => {
+      .catch((e:unknown) => {
         console.error(e);
       });
   }, []);
