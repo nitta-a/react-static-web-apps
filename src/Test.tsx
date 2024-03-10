@@ -5,10 +5,20 @@ export const Test: React.FC = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await (await fetch('/api/message')).json();
+      const res = await (await fetch('/api/httpTrigger1')).text();
       setData(res);
     })();
-  });
+  }, []);
+
+  useEffect(() => {
+    fetch('/api/httpTrigger2')
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((e: unknown) => {
+        console.error(e);
+      });
+  }, []);
 
   return <div>Test component {data}</div>;
 };

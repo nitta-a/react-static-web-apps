@@ -1,6 +1,7 @@
 {
   "cSpell.words": [
-    "biomejs"
+    "biomejs",
+    "openai"
   ],
   "azureFunctions.deploySubpath": "api",
   "azureFunctions.postDeployTask": "npm install (functions)",

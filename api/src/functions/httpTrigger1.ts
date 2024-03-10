@@ -1,7 +1,7 @@
-import type { HttpRequest, HttpResponseInit, InvocationContext } from '@azure/functions';
 import { app } from '@azure/functions';
+import type { HttpRequest, HttpResponseInit, InvocationContext } from '@azure/functions';
 
-export async function message(
+export async function httpTrigger1(
   request: HttpRequest,
   context: InvocationContext
 ): Promise<HttpResponseInit> {
@@ -12,8 +12,8 @@ export async function message(
   return { body: `Hello, ${name}! TS` };
 }
 
-app.http('message', {
+app.http('httpTrigger1', {
   methods: ['GET', 'POST'],
   authLevel: 'anonymous',
-  handler: message,
+  handler: httpTrigger1,
 });
