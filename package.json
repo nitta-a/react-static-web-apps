@@ -6,7 +6,9 @@
     "dev": "vite",
     "start": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "pnpm dlx @biomejs/biome format src/*",
+    "lint": "pnpm dlx @biomejs/biome lint src/*",
+    "check": "pnpm dlx @biomejs/biome check --apply src/*",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -14,17 +16,13 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.6.0",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.1",
     "@testing-library/user-event": "^14.5.2",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
-    "@typescript-eslint/eslint-plugin": "^7.1.1",
-    "@typescript-eslint/parser": "^7.1.1",
     "@vitejs/plugin-react-swc": "^3.6.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "^5.4.2",
     "vite": "^5.1.5"
   },
