@@ -13,7 +13,7 @@ function App() {
     })();
   }, []);
 
-  return <div>Hello {value}</div>;
+  return <div>Hello {value} {data}</div>;
 }
 
 export default App;
